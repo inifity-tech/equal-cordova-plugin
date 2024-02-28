@@ -69,7 +69,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import androidx.core.content.FileProvider;
+import android.support.v4.content.FileProvider;
 
 
 import org.apache.cordova.PermissionHelper;
