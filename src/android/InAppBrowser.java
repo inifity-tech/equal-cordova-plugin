@@ -958,7 +958,7 @@ public class InAppBrowser extends CordovaPlugin {
                                     File photoFile = createImageFile(); // Create a temporary file for the image
                                     Log.d(LOG_TAG, "------> 7");
                                     mCurrentPhotoUri = FileProvider.getUriForFile(cordova.getActivity(),
-                                            InAppBrowser.this.cordova.getContext().getPackageName() + ".cordova.plugin.camera.provider",
+                                            InAppBrowser.this.cordova.getActivity().getPackageName() + ".cordova.plugin.camera.provider",
                                             photoFile);
                                     Log.d(LOG_TAG, "------> 8");
                                     intent.putExtra(MediaStore.EXTRA_OUTPUT, mCurrentPhotoUri);
@@ -1149,7 +1149,7 @@ public class InAppBrowser extends CordovaPlugin {
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 File photoFile = createImageFile(); // Create a temporary file for the image
                 mCurrentPhotoUri = FileProvider.getUriForFile(cordova.getActivity(),
-                        cordova.getContext().getPackageName() + ".cordova.plugin.camera.provider",
+                        cordova.getActivity().getPackageName() + ".cordova.plugin.camera.provider",
                         photoFile);
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, mCurrentPhotoUri);
                 cordova.startActivityForResult(InAppBrowser.this, intent, CAMERA_REQUEST_CODE);
