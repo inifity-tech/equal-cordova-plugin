@@ -1489,6 +1489,7 @@ public class InAppBrowser extends CordovaPlugin {
                 LOG.e(LOG_TAG, "URI passed in has caused a JSON error.");
             }
 
+            Log.d(LOG_TAG, "START URL_SDK_EVENT URL : " + url);
             if (url != null && url.contains("URL_SDK_EVENT")) {
                 try {
                     Uri uri = Uri.parse(url);
